@@ -5,6 +5,8 @@ int main(){
 
     WSADATA wsa = {0};
 
+    
+
     if( WSAStartup(MAKEWORD(2, 2), &wsa) != 0){
         std::cerr << "Erreur: " << WSAGetLastError() << std::endl;
         return -1;
