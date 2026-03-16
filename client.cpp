@@ -5,8 +5,6 @@ int main(){
 
     WSADATA wsa = {0};
 
-    
-
     if( WSAStartup(MAKEWORD(2, 2), &wsa) != 0){
         std::cerr << "Erreur: " << WSAGetLastError() << std::endl;
         return -1;
@@ -27,5 +25,12 @@ int main(){
 
     bind(socket, (struct sockaddr *) &server_addr, sizeof(server_addr));
 
+    while(1){
+
+        SOCKET socketClient = accept(socket);
+
+
+    }
+    
     return 0;
 }
